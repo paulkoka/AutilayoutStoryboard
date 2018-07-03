@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,9 +22,12 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fyN-Hl-cjN" userLabel="BlueView">
                                 <rect key="frame" x="0.0" y="0.0" width="368" height="414"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFI-gU-0NF">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFI-gU-0NF" userLabel="blueButton">
                                         <rect key="frame" x="161.33333333333334" y="192" width="46" height="30"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="blueButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3dg-Mf-8n8"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.24745669015112515" green="0.76707142987356614" blue="0.79930703285077731" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -35,9 +39,12 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DP8-bB-4fP" userLabel="RedView">
                                 <rect key="frame" x="368" y="0.0" width="368" height="414"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H2B-12-qVY">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H2B-12-qVY" userLabel="redButton">
                                         <rect key="frame" x="161.33333333333337" y="192" width="46" height="30"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="redButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QQg-9Z-cDL"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.0061836308479999999" blue="0.02278839027" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -51,25 +58,33 @@
                         <constraints>
                             <constraint firstItem="fyN-Hl-cjN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" identifier="02" id="4BY-iJ-f7Z"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DP8-bB-4fP" secondAttribute="bottom" identifier="01" id="4IL-Sf-Nju"/>
+                            <constraint firstItem="fyN-Hl-cjN" firstAttribute="width" secondItem="DP8-bB-4fP" secondAttribute="width" identifier="03" id="Cxm-pW-CdK"/>
                             <constraint firstItem="fyN-Hl-cjN" firstAttribute="bottom" secondItem="DP8-bB-4fP" secondAttribute="top" identifier="11" id="N0m-fQ-u7E"/>
-                            <constraint firstItem="fyN-Hl-cjN" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" identifier="22" id="R5H-zC-2ll"/>
+                            <constraint firstItem="fyN-Hl-cjN" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" priority="999" identifier="22" id="R5H-zC-2ll"/>
                             <constraint firstItem="DP8-bB-4fP" firstAttribute="leading" secondItem="fyN-Hl-cjN" secondAttribute="leading" identifier="13" id="RSe-0r-2gB"/>
-                            <constraint firstItem="fyN-Hl-cjN" firstAttribute="width" secondItem="DP8-bB-4fP" secondAttribute="width" identifier="03" id="Weh-5M-eiq"/>
+                            <constraint firstItem="fyN-Hl-cjN" firstAttribute="height" secondItem="DP8-bB-4fP" secondAttribute="height" multiplier="0.3" identifier="151" id="Rux-9B-ZOK"/>
+                            <constraint firstItem="fyN-Hl-cjN" firstAttribute="width" secondItem="DP8-bB-4fP" secondAttribute="width" multiplier="3" priority="999" identifier="232" id="Weh-5M-eiq"/>
+                            <constraint firstItem="fyN-Hl-cjN" firstAttribute="height" secondItem="DP8-bB-4fP" secondAttribute="height" multiplier="3" identifier="152" id="dRC-Fd-gka"/>
                             <constraint firstItem="fyN-Hl-cjN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" identifier="04" id="fG5-xj-Wr6"/>
                             <constraint firstItem="fyN-Hl-cjN" firstAttribute="trailing" secondItem="DP8-bB-4fP" secondAttribute="leading" identifier="21" id="kwv-l1-2sO"/>
-                            <constraint firstItem="fyN-Hl-cjN" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" identifier="12" id="njo-hw-ont"/>
+                            <constraint firstItem="fyN-Hl-cjN" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" priority="999" identifier="12" id="njo-hw-ont"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DP8-bB-4fP" secondAttribute="trailing" identifier="23" id="sK4-9K-jSd"/>
                             <constraint firstItem="fyN-Hl-cjN" firstAttribute="height" secondItem="DP8-bB-4fP" secondAttribute="height" identifier="05" id="v8I-QQ-jFY"/>
+                            <constraint firstItem="fyN-Hl-cjN" firstAttribute="width" secondItem="DP8-bB-4fP" secondAttribute="width" multiplier="0.3" identifier="231" id="yFc-RB-2AP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="sK4-9K-jSd"/>
-                                <exclude reference="RSe-0r-2gB"/>
                                 <exclude reference="N0m-fQ-u7E"/>
                                 <exclude reference="R5H-zC-2ll"/>
+                                <exclude reference="Rux-9B-ZOK"/>
+                                <exclude reference="Weh-5M-eiq"/>
+                                <exclude reference="dRC-Fd-gka"/>
                                 <exclude reference="kwv-l1-2sO"/>
                                 <exclude reference="njo-hw-ont"/>
+                                <exclude reference="yFc-RB-2AP"/>
+                                <exclude reference="RSe-0r-2gB"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact-widthClass=regular">
@@ -81,12 +96,22 @@
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="constraints">
-                                <include reference="RSe-0r-2gB"/>
                                 <include reference="N0m-fQ-u7E"/>
+                                <exclude reference="Rux-9B-ZOK"/>
+                                <exclude reference="dRC-Fd-gka"/>
                                 <include reference="njo-hw-ont"/>
+                                <include reference="RSe-0r-2gB"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="commonHeigth" destination="v8I-QQ-jFY" id="Kzn-wK-Bv2"/>
+                        <outlet property="commonWidth" destination="Cxm-pW-CdK" id="R1I-Wn-9Ru"/>
+                        <outlet property="compactBlueViewSmall" destination="Rux-9B-ZOK" id="RCd-qZ-zST"/>
+                        <outlet property="compactRedViewSmall" destination="dRC-Fd-gka" id="qoe-Lp-jII"/>
+                        <outlet property="regularBlueViewSmall" destination="yFc-RB-2AP" id="GvU-oO-4ZF"/>
+                        <outlet property="regularRedViewSmall" destination="Weh-5M-eiq" id="XnA-Ze-7hY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
